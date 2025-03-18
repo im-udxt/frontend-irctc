@@ -131,7 +131,10 @@ export default function Home() {
                   </div>
                 </div>
                 <Link href="/trains">
-                  <Button className="w-full">Search Trains</Button>
+                  <Button className="w-full">
+                    <FaSearch className="mr-3" />
+                    Search Trains
+                  </Button>
                 </Link>
               </form>
             </AnimatedSection>

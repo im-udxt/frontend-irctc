@@ -1,57 +1,32 @@
 # IRCTC Frontend Redesign
 
-A modern, user-friendly redesign of the Indian Railway Catering and Tourism Corporation (IRCTC) website's frontend interface. This project focuses on creating an intuitive and visually appealing user experience for train booking and related services.
+A modern, responsive frontend redesign for the Indian Railway Catering and Tourism Corporation (IRCTC) website using Next.js 14, TypeScript, and Tailwind CSS.
 
-## 🚀 Features
+## Features
 
-- Modern, responsive design
-- User-friendly interface
-- Interactive components
-- Smooth navigation
-- Mobile-first approach
+- 🚂 Modern and responsive design
+- 🎨 Beautiful UI with Tailwind CSS
+- ⚡ Fast performance with Next.js 14
+- 🔍 Real-time train search and booking
+- 📱 Mobile-first approach
+- 🎭 Smooth animations with Framer Motion
+- 🎯 Interactive components
+- 🔒 Secure authentication
+- 📊 Real-time train tracking
+- 🎫 PNR status checking
 
-## 📋 Pages
+## Tech Stack
 
-1. Landing Page
-   - Hero section with search functionality
-   - Featured services
-   - Quick booking options
-   - News and updates
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** React Icons
+- **Form Handling:** React Hook Form
+- **State Management:** React Context
+- **API Integration:** Axios
 
-2. Login/Signup
-   - Clean authentication interface
-   - Social login options
-   - Form validation
-   - Password recovery
-
-3. Train Booking
-   - Intuitive search form
-   - Date and time picker
-   - Passenger details form
-   - Payment integration UI
-
-4. Train List Page
-   - Filterable train results
-   - Sorting options
-   - Fare comparison
-   - Quick booking actions
-
-5. Track Your Train
-   - Real-time train status UI
-   - Station-wise updates
-   - Delay information
-   - Route visualization
-
-## 🛠️ Tech Stack
-
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- React Icons
-- React Hook Form
-- Zod (Form Validation)
-
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone the repository:
    ```bash
@@ -60,56 +35,88 @@ A modern, user-friendly redesign of the Indian Railway Catering and Tourism Corp
 
 2. Install dependencies:
    ```bash
+   cd frontend-irctc
    npm install
    ```
 
-3. Run the development server:
+3. Create a `.env.local` file in the root directory and add your environment variables:
+   ```env
+   NEXT_PUBLIC_API_URL=your_api_url
+   ```
+
+4. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 frontend-irctc/
 ├── src/
-│   ├── app/              # Next.js app directory
-│   ├── components/       # Reusable components
-│   ├── styles/          # Global styles
-│   └── types/           # TypeScript types
-├── public/              # Static assets
-└── package.json         # Project dependencies
+│   ├── app/                    # Next.js app directory
+│   │   ├── (auth)/            # Authentication routes
+│   │   ├── booking/           # Booking related pages
+│   │   ├── trains/            # Train search and listing
+│   │   └── track-train/       # Train tracking
+│   ├── components/            # React components
+│   │   ├── layout/           # Layout components
+│   │   ├── ui/               # UI components
+│   │   └── forms/            # Form components
+│   ├── lib/                   # Utility functions
+│   ├── hooks/                 # Custom React hooks
+│   ├── styles/                # Global styles
+│   └── types/                 # TypeScript types
+├── public/                    # Static assets
+└── package.json              # Project dependencies
 ```
 
-## 🎨 Design System
+## Key Components
 
-- Colors: Primary (#1E40AF), Secondary (#3B82F6)
-- Typography: Inter (Google Fonts)
-- Icons: React Icons
-- Components: Custom-built with Tailwind CSS
+### Layout Components
+- `Navbar`: Responsive navigation with mobile menu
+- `Footer`: Site footer with important links
+- `Layout`: Main layout wrapper
 
-## 📱 Responsive Design
+### UI Components
+- `Button`: Reusable button component
+- `Card`: Card container component
+- `Input`: Form input component
+- `LoadingSpinner`: Animated loading indicator
+- `AnimatedSection`: Scroll-triggered animations
 
-- Mobile: < 640px
-- Tablet: 640px - 1024px
-- Desktop: > 1024px
+### Form Components
+- `Form`: Form wrapper with validation
+- `FormField`: Form input field
+- `SelectField`: Dropdown select field
 
-## 🤝 Contributing
+## Animations
+
+The project uses Framer Motion for smooth animations:
+
+- Loading spinner with bouncing train icon
+- Scroll-triggered fade-in and slide-up animations
+- Staggered animations for lists and grids
+- Smooth transitions between pages
+- Interactive hover effects
+
+## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- Icons: [React Icons](https://react-icons.github.io/react-icons/)
-- Fonts: [Google Fonts](https://fonts.google.com/)
-- UI Components: Custom-built with Tailwind CSS
+- IRCTC for inspiration
+- Next.js team for the amazing framework
+- Tailwind CSS team for the utility-first CSS framework
+- Framer Motion team for the animation library

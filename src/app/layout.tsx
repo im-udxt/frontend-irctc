@@ -7,8 +7,13 @@ import Footer from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IRCTC - Indian Railways",
-  description: "Book your train tickets, check train status, and more with IRCTC",
+  title: "IRCTC - Indian Railway Booking",
+  description: "Book train tickets, check PNR status, and track trains with IRCTC",
+  icons: {
+    icon: "/images/irctc.png",
+    shortcut: "/images/irctc.png",
+    apple: "/images/irctc.png",
+  },
 };
 
 export default function RootLayout({
