@@ -1,7 +1,7 @@
 "use client";
 
 import { FaTrain, FaUser, FaCalendar, FaClock } from "react-icons/fa";
-import Form, { FormField } from "@/components/ui/Form";
+import Form, { FormField, SelectField } from "@/components/ui/Form";
 import Button from "@/components/ui/Button";
 import Card, { CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 
@@ -73,16 +73,16 @@ export default function BookingPage() {
                 max="120"
               />
 
-              <FormField
+              <SelectField
                 label="Gender"
-                type="select"
                 required
-              >
-                <option value="">Select gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </FormField>
+                options={[
+                  { value: "", label: "Select gender" },
+                  { value: "male", label: "Male" },
+                  { value: "female", label: "Female" },
+                  { value: "other", label: "Other" }
+                ]}
+              />
 
               <FormField
                 label="Mobile Number"

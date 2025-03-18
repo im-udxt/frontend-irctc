@@ -53,13 +53,19 @@ export const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
 
 FormField.displayName = "FormField";
 
+interface SelectOption {
+  value: string;
+  label: string;
+}
+
 interface SelectFieldProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label: string;
   error?: string;
+  options: SelectOption[];
 }
 
 export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(
-  ({ className, label, error, children, ...props }, ref) => {
+  ({ className, label, error, options, ...props }, ref) => {
     return (
       <div className="space-y-1">
         <label className="block text-sm font-medium text-foreground">
@@ -74,7 +80,11 @@ export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(
           )}
           {...props}
         >
-          {children}
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
         </select>
         {error && (
           <p className="text-sm text-red-500">{error}</p>
