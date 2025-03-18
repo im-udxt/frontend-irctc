@@ -30,7 +30,7 @@ A modern, responsive frontend redesign for the Indian Railway Catering and Touri
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/frontend-irctc.git
+   git clone https://github.com/im-udxt/frontend-irctc.git
    ```
 
 2. Install dependencies:
