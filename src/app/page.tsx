@@ -10,24 +10,35 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-gradient-to-r from-primary to-secondary">
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="container mx-auto px-4 h-full flex items-center relative z-10">
+      <section className="relative h-[600px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/train.jpg"
+            alt="Train Background"
+            fill
+            className="object-cover brightness-75"
+            priority
+          />
+        </div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-primary/70 z-10" />
+        <div className="container mx-auto px-4 h-full flex items-center relative z-20">
           <AnimatedSection className="max-w-2xl text-white" delay={0.2}>
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-5xl font-bold mb-6 drop-shadow-lg">
               Book Your Train Journey with Ease
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 drop-shadow-lg">
               Experience seamless train booking, real-time tracking, and exclusive offers with IRCTC.
             </p>
             <div className="flex gap-4">
               <Link href="/trains">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
                   Book Now
                 </Button>
               </Link>
               <Link href="/track-train">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 shadow-lg">
                   Track Train
                 </Button>
               </Link>
